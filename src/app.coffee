@@ -7,7 +7,7 @@ HelloWorldLayer = cc.Layer.extend
 
     helloLabel = new cc.LabelTTF "Hello World", "Arial", 38
     helloLabel.x = size.width / 2
-    helloLabel.y = 0
+    helloLabel.y = size.height / 2
     @addChild helloLabel, 5
 
 HelloWorldScene = cc.Scene.extend
