@@ -2,9 +2,7 @@ HelloWorldLayer = cc.Layer.extend
   sprite : null
   ctor : ->
     @_super()
-
     size = cc.winSize
-
     helloLabel = new cc.LabelTTF "Hello World", "Arial", 38
     helloLabel.x = size.width / 2
     helloLabel.y = size.height / 2
