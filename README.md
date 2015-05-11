@@ -6,3 +6,6 @@ cocos2d-JS v3.5+ skeleton
 
 ・build   
 ```gulp build```
+
+ 
+MIT LISENCE
