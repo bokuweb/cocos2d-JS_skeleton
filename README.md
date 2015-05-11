@@ -1,8 +1,8 @@
 # cocos2d-JS_skelton
 cocos2d-JS v3.5+ skeleton
 
-・setup
+・setup   
 ```npm install```
 
-・build
+・build   
 ```gulp build```
