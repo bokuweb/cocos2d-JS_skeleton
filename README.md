@@ -2,10 +2,10 @@
 cocos2d-JS v3.5+ skeleton
 
 ・setup   
-```npm install```
+```npm i```
 
-・build   
-```gulp build```
+・watch
+```gulp watch```
 
  
 MIT LISENCE
