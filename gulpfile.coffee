@@ -1,24 +1,17 @@
 gulp        = require 'gulp'
-coffee      = require 'gulp-coffee'
 watchify    = require 'gulp-watchify'
 plumber     = require 'gulp-plumber'
-runSequence = require 'run-sequence'
-  .use gulp
-
-gulp.task 'build:coffee', ->
-  gulp.src 'src/*.coffee'
-    .pipe plumber()
-    .pipe coffee()
-    .pipe gulp.dest 'js'
+rename      = require 'gulp-rename'
 
 gulp.task 'watchify', watchify (watchify)->
-  gulp.src 'js/main.js'
+  gulp.src 'src/main.coffee'
     .pipe plumber()
     .pipe watchify
-      watch : on
+      watch     : on
+      extensions: ['.coffee', '.js']
+      transform : ['coffeeify']
+    .pipe rename
+      extname: ".js"
     .pipe gulp.dest './'
 
-gulp.task 'watch', ['build:coffee'], ->
-  gulp.watch 'src/*.coffee', []
-    .on 'change', ->
-      runSequence 'build:coffee', 'watchify'
+gulp.task 'watch', ['watchify']
